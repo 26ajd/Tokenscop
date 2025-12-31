@@ -20,7 +20,7 @@
 - Xcode عند بناء على iOS (يتطلب macOS).
 -
 
-[▶️ مشاهدة الفيديو](assets/videos/video_1.mp4)
+[▶️ مشاهدة الفيديو](https://github.com/user-attachments/assets/a30fecbd-9aec-430f-b8b3-e37be31e07b9)
 
 - متصفح حديث لتشغيل نسخة الويب.
 
