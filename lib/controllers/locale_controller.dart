@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
@@ -32,3 +32,4 @@ class LocaleController extends GetxController {
 
   bool get isArabic => locale.value.languageCode == 'ar';
 }
+

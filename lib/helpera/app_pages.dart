@@ -1,13 +1,13 @@
-import 'package:get/get.dart';
-import 'routes.dart';
-import '../screens/task_list_screen.dart';
-import '../screens/category_list_screen.dart';
+﻿import 'package:get/get.dart';
+import '../screens/currency_details_view.dart';
 import '../screens/splash_screen.dart';
+import 'routes.dart';
 import '../screens/login_screen.dart';
+import '../screens/register_screen.dart';
 import '../screens/main_screen.dart';
-import '../controllers/task_controller.dart';
-import '../controllers/category_controller.dart';
 import '../controllers/auth_controller.dart';
+import '../screens/home_view.dart';
+import '../controllers/currency_controller.dart';
 
 class AppPages {
   static final pages = [
@@ -17,7 +17,14 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.LOGIN,
-      page: () => const LoginScreen(),
+      page: () => LoginScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut(() => AuthController());
+      }),
+    ),
+    GetPage(
+      name: AppRoutes.REGISTER,
+      page: () => RegisterScreen(),
       binding: BindingsBuilder(() {
         Get.lazyPut(() => AuthController());
       }),
@@ -25,26 +32,18 @@ class AppPages {
     GetPage(
       name: AppRoutes.MAIN,
       page: () => const MainScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.CRYPTO,
+      page: () => HomeView(),
       binding: BindingsBuilder(() {
-        Get.lazyPut(() => TaskController());
-        Get.lazyPut(() => CategoryController());
+        Get.lazyPut(() => CurrencyController());
       }),
     ),
     GetPage(
-      name: AppRoutes.TASKS,
-      page: () => const TaskListScreen(),
-      binding: BindingsBuilder(() {
-        Get.lazyPut(() => TaskController());
-        Get.lazyPut(() => CategoryController());
-      }),
-    ),
-    GetPage(
-      name: AppRoutes.CATEGORIES,
-      page: () => const CategoryListScreen(),
-      binding: BindingsBuilder(() {
-        Get.lazyPut(() => CategoryController());
-        Get.lazyPut(() => TaskController());
-      }),
+      name: AppRoutes.CRYPTO_DETAILS,
+      page: () => const CurrencyDetailsView(),
     ),
   ];
 }
+

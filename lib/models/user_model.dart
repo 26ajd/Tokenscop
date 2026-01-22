@@ -1,4 +1,4 @@
-class UserModel {
+﻿class UserModel {
   int id;
   String username;
   String email;
@@ -43,3 +43,4 @@ class UserModel {
 
   String get fullName => '$firstName $lastName';
 }
+

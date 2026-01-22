@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 class AppThemes {
   static final light = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.deepPurple,
+      seedColor: Colors.indigo,
       brightness: Brightness.light,
     ),
     appBarTheme: const AppBarTheme(centerTitle: true),
@@ -15,7 +15,7 @@ class AppThemes {
     useMaterial3: true,
     brightness: Brightness.dark,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.deepPurple,
+      seedColor: Colors.indigo,
       brightness: Brightness.dark,
     ),
     appBarTheme: const AppBarTheme(centerTitle: true),
@@ -23,22 +23,19 @@ class AppThemes {
 }
 
 class AppColors {
-  static const primary = Colors.deepPurple;
+  static const primary = Colors.indigo;
   static const white = Colors.white;
   static const transparent = Colors.transparent;
 
-  // Semantic
   static const error = Colors.red;
   static const success = Colors.green;
   static const warning = Colors.orange;
   static const info = Colors.blue;
 
-  // Shades
   static const textSubtle = Colors.grey;
   static final iconSubtle = Colors.grey[400];
   static final textSubtleDark = Colors.grey[600];
 
-  // Backgrounds
   static final errorContainer = Colors.red.withOpacity(0.1);
   static final successContainer = Colors.green.withOpacity(0.1);
 }
@@ -57,3 +54,4 @@ const categoryColors = [
   Color(0xFFFFA726),
   Color(0xFFFF7043),
 ];
+
