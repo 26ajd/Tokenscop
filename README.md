@@ -1,16 +1,68 @@
-# flutter_hive
+# Tokenscop
 
-A new Flutter project.
+مشروع Flutter لتتبع العملات الرقمية (واجهة ومزايا عرض السوق، تفاصيل العملة، تسجيل مستخدم، والإعدادات).
 
-## Getting Started
+## الوصف
 
-This project is a starting point for a Flutter application.
+`Tokenscop` هو تطبيق مبني بـ Flutter يعرض بيانات العملات الرقمية ويقدم واجهات لعرض السوق، تفاصيل كل عملة، والحساب الشخصي. يدعم مصادر بيانات مثل CoinGecko وBinance (ملفات النماذج موجودة في `lib/models`).
 
-A few resources to get you started if this is your first Flutter project:
+## المزايا الرئيسية
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- عرض قائمة العملات والسوق.
+- صفحة تفاصيل العملة مع الرسوم البيانية والقيم.
+- تسجيل / تسجيل دخول للمستخدم.
+- دعم تعدد اللغات والثيمات.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## متطلبات مسبقة
+
+- Flutter SDK (الإصدار المستقر الموصى به).
+- Android SDK لِتشغيل على أجهزة أندرويد.
+- Xcode عند بناء على iOS (يتطلب macOS).
+- متصفح حديث لتشغيل نسخة الويب.
+
+تأكد من إعداد المتطلبات بتشغيل:
+
+```
+flutter doctor
+```
+
+## إعداد وتشغيل المشروع (PowerShell على Windows)
+
+1. استرجاع الحزم:
+
+```
+flutter pub get
+```
+
+2. تشغيل على جهاز Android متصل أو محاكي:
+
+```
+flutter run -d android
+```
+
+3. تشغيل على المتصفح (Web):
+
+```
+flutter run -d chrome
+```
+
+4. بناء إصدار جاهز للنشر (Android APK):
+
+```
+flutter build apk --release
+```
+
+5. بناء iOS (macOS + Xcode مطلوبان):
+
+```
+flutter build ios --release
+```
+
+## هيكل المشروع (مختصر)
+
+- `lib/main.dart` : نقطة الدخول.
+- `lib/controllers/` : تحكمات الحالة (GetX أو ما شابه).
+- `lib/models/` : نماذج البيانات (CoinGecko, Binance...).
+- `lib/screens/` : الشاشات الرئيسية للتطبيق.
+- `lib/widgets/` : العناصر القابلة لإعادة الاستخدام.
+- `assets/` : الصور والوسائط.
